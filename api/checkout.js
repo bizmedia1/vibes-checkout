@@ -15,13 +15,14 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${process.env.KORAPAY_SECRET_KEY}`,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        amount: 12000,
-        currency: "NGN",
-        customer: {
-          email: "mouah@email.com"
-        }
-      })
+     body: JSON.stringify({
+  amount: 5000,
+  currency: "NGN",
+  reference: "ref_" + Date.now(), // ✅ ADD THIS LINE
+  customer: {
+    email: "test@email.com"
+  }
+})
     });
 
     const data = await response.json();
