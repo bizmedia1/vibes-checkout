@@ -15,13 +15,14 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${process.env.KORAPAY_SECRET_KEY}`,
         "Content-Type": "application/json"
       },
-     body: JSON.stringify({
-  amount: 12000,
+body: JSON.stringify({
+  amount: 5000,
   currency: "NGN",
-  reference: "ref_" + Date.now(), // ✅ ADD THIS LINE
+  reference: "ref_" + Date.now(),
   customer: {
-    email: "nulhexu@email.com"
-  }
+    email: "stmingq@email.com"
+  },
+  redirect_url: "https://tr.ee/kf8yz4NjOi"
 })
     });
 
