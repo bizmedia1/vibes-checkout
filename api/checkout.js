@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
 body: JSON.stringify({
-  amount: 12000,
+  amount: 14000,
   currency: "NGN",
   reference: "ref_" + Date.now(),
   customer: {
